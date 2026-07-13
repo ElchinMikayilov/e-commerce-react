@@ -4,16 +4,17 @@ import Header from "./components/Header"
 import Router from "./router/Router"
 
 function App() {
+  const [search, setSearch] = useState("")
   const [favourite, setFavourite] = useState([])
   const [basket, setBasket] = useState([])
 
   return (
     <div className="bg-gray-50">
       <Header favourite={favourite} basket={basket} />
-      <Router favourite={favourite} setFavourite={setFavourite} basket={basket} setBasket={setBasket} />
+      <Router search={search} setSearch={setSearch} favourite={favourite} setFavourite={setFavourite} basket={basket} setBasket={setBasket} />
       <Footer />
     </div>
-  );
+  )
 }
 
 export default App

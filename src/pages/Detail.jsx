@@ -18,7 +18,7 @@ const Detail = ({ favourite, setFavourite, basket, setBasket }) => {
 
   useEffect(() => {
     getDetail(id).then((res) => {
-      setProducts(res.data);
+      setProducts(res.data)
     });
   }, [id]);
 

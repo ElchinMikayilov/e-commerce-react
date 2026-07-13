@@ -6,9 +6,8 @@ import Sort from "../components/Sort"
 import Loader from "../components/Loader"
 import Category from "../components/Category"
 
-const Home = ({ favourite, setFavourite, basket, setBasket }) => {
+const Home = ({ search, setSearch, favourite, setFavourite, basket, setBasket }) => {
     const [data, setData] = useState([])
-    const [search, setSearch] = useState("")
     const [sort, setSort] = useState("")
     const [loader, setLoader] = useState(true)
     const [category, setCategory] = useState("")

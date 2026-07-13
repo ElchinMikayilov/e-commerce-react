@@ -13,10 +13,10 @@ export const paths = [
     { title: 'Faq', path: 'faq', element: < FAQ /> },
 ]
 
-const Router = ({ favourite, setFavourite, basket, setBasket }) => {
+const Router = ({ search, setSearch, favourite, setFavourite, basket, setBasket }) => {
     return (
         <Routes>
-            <Route path='/' element={<Home favourite={favourite} setFavourite={setFavourite} basket={basket} setBasket={setBasket} />} />
+            <Route path='/' element={<Home search={search} setSearch={setSearch} favourite={favourite} setFavourite={setFavourite} basket={basket} setBasket={setBasket} />} />
             {
                 paths.map((item, index) => <Route key={index} path={item.path} element={item.element} />)
             }
