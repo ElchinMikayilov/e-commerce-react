@@ -5,6 +5,7 @@ import { Link } from "react-router"
 
 message.config({
     maxCount: 1,
+    top: 100,
 })
 
 const ProductsCard = ({

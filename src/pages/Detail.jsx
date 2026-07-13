@@ -8,6 +8,7 @@ import { message } from "antd";
 
 message.config({
     maxCount: 1,
+    top: 75,
 })
 
 const Detail = ({ favourite, setFavourite, basket, setBasket }) => {
