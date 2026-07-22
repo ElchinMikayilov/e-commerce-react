@@ -3,7 +3,6 @@ import { Empty, message, Popconfirm } from "antd"
 import { Link } from "react-router"
 import { FaBasketShopping } from "react-icons/fa6"
 
-
 const Favorite = ({ favourite, setFavourite, basket, setBasket }) => {
     const addBasket = (item) => {
         const add = basket.find(card => card.id === item.id)

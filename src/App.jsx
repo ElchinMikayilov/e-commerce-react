@@ -1,12 +1,26 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Router from "./router/Router"
 
 function App() {
   const [search, setSearch] = useState("")
-  const [favourite, setFavourite] = useState([])
-  const [basket, setBasket] = useState([])
+  const [favourite, setFavourite] = useState(() => {
+    const data = localStorage.getItem('favourite')
+    return data ? JSON.parse(data) : []
+  })
+  const [basket, setBasket] = useState(() => {
+    const data = localStorage.getItem('basket')
+    return data ? JSON.parse(data) : []
+  })
+
+  useEffect(() => {
+    localStorage.setItem('favourite', JSON.stringify(favourite))
+  }, [favourite])
+
+  useEffect(() => {
+    localStorage.setItem('basket', JSON.stringify(basket))
+  }, [basket])
 
   return (
     <div className="bg-gray-50">
